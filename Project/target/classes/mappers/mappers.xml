@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="GroupID.ArtifactID.컨텍스트.Mappers이름">
+	<select id="getUserWithId" resultType="com.blacksw.sign.user.dto.UserVO" parameterType="long">
+		SELECT * FROM user_tb WHERE id = #{id}
+	</select>
+	<insert id="insertUser" parameterType="hashMap">
+		INSERT INTO user_tb VALUES (member_seq.nextval, #{password}, #{name}, #{email})
+	</insert>
+</mapper>
